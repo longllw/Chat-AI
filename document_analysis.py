@@ -14,7 +14,8 @@ def get_ai_response_for_document_analysis(user_prompt, model_version, temperatur
         load_dotenv()
         model = ChatOpenAI(
             model=model_version,
-            api_key='hk-qs8d101000055444378649f712c688d8f09a39faa8151aa3',
+            # api_key='hk-qs8d101000055444378649f712c688d8f09a39faa8151aa3',
+            api_key=st.secrets['API_KEY'],
             base_url="https://api.openai-hk.com/v1"
         )
         # 构造包含文档内容的完整提示

@@ -1,9 +1,3 @@
-"""
-main02.py - 自助式数据分析（数据分析智能体）
-
-Author: 骆昊
-Version: 0.4 (增加对话反馈功能版)
-"""
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -196,8 +190,10 @@ def chat_module():
     def get_ai_response(user_prompt):
         try:
             model = ChatOpenAI(
+
                 base_url='https://twapi.openai-hk.com/v1',
-                api_key='hk-qs8d101000055444378649f712c688d8f09a39faa8151aa3',
+                #api_key='hk-qs8d101000055444378649f712c688d8f09a39faa8151aa3',
+                api_key=st.secrets['API_KEY'],
                 model=model_name,
                 temperature=temperature,
                 presence_penalty=presence_penalty,
@@ -308,11 +304,6 @@ def chat_module():
                 ai_msg = {'role': 'ai', 'content': response}
                 st.session_state['messages'].append(ai_msg)
                 st.chat_message("ai").write(response)
-
-
-class Data_Analysis:
-    pass
-
 
 def main():
     """主界面"""
