@@ -16,6 +16,7 @@ cycler==0.12.1
 dataclasses-json==0.6.7
 distro==1.9.0
 dotenv==0.9.9
+et_xmlfile==2.0.0
 fonttools==4.58.1
 frozenlist==1.6.0
 gitdb==4.0.12
@@ -48,6 +49,7 @@ mypy_extensions==1.1.0
 narwhals==1.41.0
 numpy==2.2.6
 openai==1.82.0
+openpyxl==3.1.5
 orjson==3.10.18
 packaging==24.2
 pandas==2.2.3
